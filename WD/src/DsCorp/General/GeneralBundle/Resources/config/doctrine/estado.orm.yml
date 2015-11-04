@@ -1,0 +1,39 @@
+DsCorp\General\GeneralBundle\Entity\estado:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombreEstado:
+            type: string
+            length: '50'
+            column: nombre_estado
+    oneToMany: 
+        direccion_fabricante:
+            targetEntity: DsCorp\Fabricante\FabricanteBundle\Entity\direccion_fabricante
+            mappedBy: estado
+    oneToMany: 
+        direccion_cliente:
+            targetEntity: DsCorp\Empresa\EmpresaBundle\Entity\direccion_cliente
+            mappedBy: estado
+    manyToOne: 
+        pais:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\pais
+            mappedBy: estado
+    oneToMany:
+        ubicacion:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\ubicacion
+            mappedBy: estado 
+    oneToMany:
+        direccion_empresa:
+            targetEntity: DsCorp\Empresa\EmpresaBundle\Entity\direccion_empresa
+            mappedBy: estado
+    oneToMany:
+        direccion_personal:
+            targetEntity: DsCorp\Personal\PersonalBundle\Entity\direccion_personal
+            mappedBy: estado
+    lifecycleCallbacks: {  }

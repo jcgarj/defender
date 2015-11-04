@@ -1,0 +1,30 @@
+caracteristicas_equipo:
+    path:     /
+    defaults: { _controller: "EquipoBundle:caracteristicas_equipo:index" }
+
+caracteristicas_equipo_show:
+    path:     /{id}/show
+    defaults: { _controller: "EquipoBundle:caracteristicas_equipo:show" }
+
+caracteristicas_equipo_new:
+    path:     /new
+    defaults: { _controller: "EquipoBundle:caracteristicas_equipo:new" }
+
+caracteristicas_equipo_create:
+    path:     /create
+    defaults: { _controller: "EquipoBundle:caracteristicas_equipo:create" }
+    methods:  POST
+
+caracteristicas_equipo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EquipoBundle:caracteristicas_equipo:edit" }
+
+caracteristicas_equipo_update:
+    path:     /{id}/update
+    defaults: { _controller: "EquipoBundle:caracteristicas_equipo:update" }
+    methods:  [POST, PUT]
+
+caracteristicas_equipo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EquipoBundle:caracteristicas_equipo:delete" }
+    methods:  [POST, DELETE]

@@ -1,0 +1,44 @@
+DsCorp\Equipo\EquipoBundle\Entity\caracteristicas_equipo:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        versionSoftware:
+            type: string
+            length: '10'
+            column: version_software
+        numeroInterfaz:
+            type: integer
+            column: numero_interfaz
+        dimenciones:
+            type: string
+            length: '20'
+    oneToMany:
+        modelo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\modelo
+            mappedBy: caracteristicas_equipo
+    manyToOne:
+        capacidad:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\capacidad
+            mappedBy: caracteristicas_equipo
+    manyToOne:
+        disco_duro: 
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\disco_duro
+    manyToOne:
+        memoria_ram:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\memoria_ram
+            mappedBy: caracteristicas_equipo
+    manyToOne:
+        procesador:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\procesador
+            mappedBy: caracteristicas_equipo
+    oneToMany: 
+        equipo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\equipo
+            mappedBy: caracteristicas_equipo
+    lifecycleCallbacks: {  }

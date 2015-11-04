@@ -1,0 +1,23 @@
+general_venta:
+    resource: "@GeneralBundle/Resources/config/routing/venta.yml"
+    prefix:   /venta
+
+general_estatus:
+    resource: "@GeneralBundle/Resources/config/routing/estatus.yml"
+    prefix:   /estatus
+
+general_ubicacion:
+    resource: "@GeneralBundle/Resources/config/routing/ubicacion.yml"
+    prefix:   /ubicacion
+
+general_pais:
+    resource: "@GeneralBundle/Resources/config/routing/pais.yml"
+    prefix:   /pais
+
+general_estado:
+    resource: "@GeneralBundle/Resources/config/routing/estado.yml"
+    prefix:   /estado
+
+general_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: GeneralBundle:Default:index }

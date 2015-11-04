@@ -1,0 +1,44 @@
+DsCorp\General\GeneralBundle\Entity\ubicacion:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        calle:
+            type: string
+            length: '50'
+        numeroExt:
+            type: string
+            length: '10'
+            column: numero_ext
+        numeroInt:
+            type: string
+            length: '10'
+            column: numero_int
+        colonia:
+            type: string
+            length: '50'
+        codigoPostal:
+            type: integer
+            column: codigo_postal
+        deleMuni:
+            type: string
+            length: '50'
+            column: dele_muni
+    manyToOne:
+        equipo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\equipo
+            mappedBy: ubicacion
+    manyToOne:
+        pais:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\pais
+            mappedBy: ubicacion
+    manyToOne:
+        estado:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\estado
+            mappedBy: ubicacion
+    lifecycleCallbacks: {  }

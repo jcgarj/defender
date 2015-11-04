@@ -1,0 +1,30 @@
+licencia_equipo:
+    path:     /
+    defaults: { _controller: "EquipoBundle:licencia_equipo:index" }
+
+licencia_equipo_show:
+    path:     /{id}/show
+    defaults: { _controller: "EquipoBundle:licencia_equipo:show" }
+
+licencia_equipo_new:
+    path:     /new
+    defaults: { _controller: "EquipoBundle:licencia_equipo:new" }
+
+licencia_equipo_create:
+    path:     /create
+    defaults: { _controller: "EquipoBundle:licencia_equipo:create" }
+    methods:  POST
+
+licencia_equipo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EquipoBundle:licencia_equipo:edit" }
+
+licencia_equipo_update:
+    path:     /{id}/update
+    defaults: { _controller: "EquipoBundle:licencia_equipo:update" }
+    methods:  [POST, PUT]
+
+licencia_equipo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EquipoBundle:licencia_equipo:delete" }
+    methods:  [POST, DELETE]

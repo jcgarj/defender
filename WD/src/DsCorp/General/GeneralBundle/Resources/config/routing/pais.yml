@@ -1,0 +1,30 @@
+pais:
+    path:     /
+    defaults: { _controller: "GeneralBundle:pais:index" }
+
+pais_show:
+    path:     /{id}/show
+    defaults: { _controller: "GeneralBundle:pais:show" }
+
+pais_new:
+    path:     /new
+    defaults: { _controller: "GeneralBundle:pais:new" }
+
+pais_create:
+    path:     /create
+    defaults: { _controller: "GeneralBundle:pais:create" }
+    methods:  POST
+
+pais_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GeneralBundle:pais:edit" }
+
+pais_update:
+    path:     /{id}/update
+    defaults: { _controller: "GeneralBundle:pais:update" }
+    methods:  [POST, PUT]
+
+pais_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GeneralBundle:pais:delete" }
+    methods:  [POST, DELETE]

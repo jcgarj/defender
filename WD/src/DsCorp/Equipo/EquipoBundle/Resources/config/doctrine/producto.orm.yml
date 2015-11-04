@@ -1,0 +1,33 @@
+DsCorp\Equipo\EquipoBundle\Entity\producto:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '10'
+        termino:
+            type: string
+            length: '10'
+    oneToMany: 
+        venta:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\venta
+            mappedBy: producto
+    oneToMany:
+        equipo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\equipo
+            mappedBy: producto
+    manyToOne:
+        modelo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\modelo
+            mappedBy: producto
+    oneToMany:
+        tipo_licencia:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\tipo_licencia
+            mappedBy: producto
+    lifecycleCallbacks: {  }

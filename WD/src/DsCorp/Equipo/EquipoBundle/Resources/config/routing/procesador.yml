@@ -1,0 +1,30 @@
+procesador:
+    path:     /
+    defaults: { _controller: "EquipoBundle:procesador:index" }
+
+procesador_show:
+    path:     /{id}/show
+    defaults: { _controller: "EquipoBundle:procesador:show" }
+
+procesador_new:
+    path:     /new
+    defaults: { _controller: "EquipoBundle:procesador:new" }
+
+procesador_create:
+    path:     /create
+    defaults: { _controller: "EquipoBundle:procesador:create" }
+    methods:  POST
+
+procesador_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EquipoBundle:procesador:edit" }
+
+procesador_update:
+    path:     /{id}/update
+    defaults: { _controller: "EquipoBundle:procesador:update" }
+    methods:  [POST, PUT]
+
+procesador_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EquipoBundle:procesador:delete" }
+    methods:  [POST, DELETE]

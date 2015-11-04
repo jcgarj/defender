@@ -1,0 +1,30 @@
+memoria_ram:
+    path:     /
+    defaults: { _controller: "EquipoBundle:memoria_ram:index" }
+
+memoria_ram_show:
+    path:     /{id}/show
+    defaults: { _controller: "EquipoBundle:memoria_ram:show" }
+
+memoria_ram_new:
+    path:     /new
+    defaults: { _controller: "EquipoBundle:memoria_ram:new" }
+
+memoria_ram_create:
+    path:     /create
+    defaults: { _controller: "EquipoBundle:memoria_ram:create" }
+    methods:  POST
+
+memoria_ram_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EquipoBundle:memoria_ram:edit" }
+
+memoria_ram_update:
+    path:     /{id}/update
+    defaults: { _controller: "EquipoBundle:memoria_ram:update" }
+    methods:  [POST, PUT]
+
+memoria_ram_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EquipoBundle:memoria_ram:delete" }
+    methods:  [POST, DELETE]

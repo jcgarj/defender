@@ -1,0 +1,30 @@
+ubicacion:
+    path:     /
+    defaults: { _controller: "GeneralBundle:ubicacion:index" }
+
+ubicacion_show:
+    path:     /{id}/show
+    defaults: { _controller: "GeneralBundle:ubicacion:show" }
+
+ubicacion_new:
+    path:     /new
+    defaults: { _controller: "GeneralBundle:ubicacion:new" }
+
+ubicacion_create:
+    path:     /create
+    defaults: { _controller: "GeneralBundle:ubicacion:create" }
+    methods:  POST
+
+ubicacion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GeneralBundle:ubicacion:edit" }
+
+ubicacion_update:
+    path:     /{id}/update
+    defaults: { _controller: "GeneralBundle:ubicacion:update" }
+    methods:  [POST, PUT]
+
+ubicacion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GeneralBundle:ubicacion:delete" }
+    methods:  [POST, DELETE]

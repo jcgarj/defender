@@ -1,0 +1,24 @@
+DsCorp\Equipo\EquipoBundle\Entity\memoria_ram:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        marca:
+            type: string
+            length: '20'
+        capacidad:
+            type: string
+            length: '10'
+        tipo:
+            type: string
+            length: '10'
+    oneToMany: 
+        caracteristicas_equipo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\caracteristicas_equipo
+            mappedBy: memoria_ram
+    lifecycleCallbacks: {  }

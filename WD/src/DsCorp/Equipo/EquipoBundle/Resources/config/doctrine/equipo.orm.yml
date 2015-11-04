@@ -1,0 +1,46 @@
+DsCorp\Equipo\EquipoBundle\Entity\equipo:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        numeroSerie:
+            type: string
+            length: '20'
+            column: numero_serie
+        fechaInstalacion:
+            type: datetime
+            column: fecha_instalacion
+    manyToOne:
+        caracteristicas_equipo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\caracteristicas_equipo
+            mappedBy: equipo
+    manyToOne:
+        producto:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\producto
+            mappedBy: equipo
+    manyToOne:
+        venta:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\venta
+            mappedBy: equipo
+    oneToMany:
+        ubicacion:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\ubicacion
+            mappedBy: equipo
+    manyToOne:
+        cliente:
+            targetEntity: DsCorp\Cliente\ClienteBundle\Entity\cliente
+            mappedBy: equipo
+    manyToOne:
+        estatus:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\estatus
+            mappedBy: equipo
+    manyToOne:
+        personal:
+            targetEntity: DsCorp\Personal\PersonalBundle\Entity\personal
+            mappedBy: equipo
+    lifecycleCallbacks: {  }

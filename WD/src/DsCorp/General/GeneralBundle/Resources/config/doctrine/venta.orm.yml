@@ -1,0 +1,30 @@
+DsCorp\General\GeneralBundle\Entity\venta:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fechaVenta:
+            type: datetime
+            column: fecha_venta
+    oneToMany:
+        equipo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\equipo
+            mappedBy: venta
+    manyToOne:
+        producto:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\producto
+            mappedBy: venta
+    manyToOne:
+        usuarios:
+            targetEntity: DsCorp\Personal\PersonalBundle\Entity\usuarios
+            mappedBy: venta
+    manyToOne:
+        estatus:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\estatus
+            mappedBy: venta
+    lifecycleCallbacks: {  }

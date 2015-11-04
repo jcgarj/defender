@@ -1,0 +1,30 @@
+capacidad:
+    path:     /
+    defaults: { _controller: "EquipoBundle:capacidad:index" }
+
+capacidad_show:
+    path:     /{id}/show
+    defaults: { _controller: "EquipoBundle:capacidad:show" }
+
+capacidad_new:
+    path:     /new
+    defaults: { _controller: "EquipoBundle:capacidad:new" }
+
+capacidad_create:
+    path:     /create
+    defaults: { _controller: "EquipoBundle:capacidad:create" }
+    methods:  POST
+
+capacidad_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EquipoBundle:capacidad:edit" }
+
+capacidad_update:
+    path:     /{id}/update
+    defaults: { _controller: "EquipoBundle:capacidad:update" }
+    methods:  [POST, PUT]
+
+capacidad_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EquipoBundle:capacidad:delete" }
+    methods:  [POST, DELETE]

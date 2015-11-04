@@ -1,0 +1,30 @@
+estatus:
+    path:     /
+    defaults: { _controller: "GeneralBundle:estatus:index" }
+
+estatus_show:
+    path:     /{id}/show
+    defaults: { _controller: "GeneralBundle:estatus:show" }
+
+estatus_new:
+    path:     /new
+    defaults: { _controller: "GeneralBundle:estatus:new" }
+
+estatus_create:
+    path:     /create
+    defaults: { _controller: "GeneralBundle:estatus:create" }
+    methods:  POST
+
+estatus_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GeneralBundle:estatus:edit" }
+
+estatus_update:
+    path:     /{id}/update
+    defaults: { _controller: "GeneralBundle:estatus:update" }
+    methods:  [POST, PUT]
+
+estatus_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GeneralBundle:estatus:delete" }
+    methods:  [POST, DELETE]

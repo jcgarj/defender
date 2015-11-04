@@ -1,0 +1,30 @@
+modelo:
+    path:     /
+    defaults: { _controller: "EquipoBundle:modelo:index" }
+
+modelo_show:
+    path:     /{id}/show
+    defaults: { _controller: "EquipoBundle:modelo:show" }
+
+modelo_new:
+    path:     /new
+    defaults: { _controller: "EquipoBundle:modelo:new" }
+
+modelo_create:
+    path:     /create
+    defaults: { _controller: "EquipoBundle:modelo:create" }
+    methods:  POST
+
+modelo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EquipoBundle:modelo:edit" }
+
+modelo_update:
+    path:     /{id}/update
+    defaults: { _controller: "EquipoBundle:modelo:update" }
+    methods:  [POST, PUT]
+
+modelo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EquipoBundle:modelo:delete" }
+    methods:  [POST, DELETE]

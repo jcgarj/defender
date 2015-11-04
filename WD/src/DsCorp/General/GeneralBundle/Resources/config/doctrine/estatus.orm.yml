@@ -1,0 +1,39 @@
+DsCorp\General\GeneralBundle\Entity\estatus:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        estatus:
+            type: string
+            length: '20'
+    oneToMany:
+        equipo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\equipo
+            mappedBy: estatus
+    oneToMany:
+        cliente:
+            targetEntity: DsCorp\Cliente\ClienteBundle\Entity\cliente
+            mappedBy: estatus
+    oneToMany:
+        venta:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\venta
+            mappedBy: estatus
+    oneToMany:
+        personal:
+            targetEntity: DsCorp\Personal\PersonalBundle\Entity\personal
+            mappedBy: estatus
+    oneToMany:
+        fabricante:
+            targetEntity: DsCorp\Fabricante\FabricanteBundle\Entity\fabricante
+            mappedBy: estatus
+    oneToMany:
+        empresa:
+            targetEntity: DsCorp\Empresa\EmpresaBundle\Entity\empresa
+            mappedBy: estatus
+    
+    lifecycleCallbacks: {  }

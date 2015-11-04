@@ -1,0 +1,30 @@
+disco_duro:
+    path:     /
+    defaults: { _controller: "EquipoBundle:disco_duro:index" }
+
+disco_duro_show:
+    path:     /{id}/show
+    defaults: { _controller: "EquipoBundle:disco_duro:show" }
+
+disco_duro_new:
+    path:     /new
+    defaults: { _controller: "EquipoBundle:disco_duro:new" }
+
+disco_duro_create:
+    path:     /create
+    defaults: { _controller: "EquipoBundle:disco_duro:create" }
+    methods:  POST
+
+disco_duro_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EquipoBundle:disco_duro:edit" }
+
+disco_duro_update:
+    path:     /{id}/update
+    defaults: { _controller: "EquipoBundle:disco_duro:update" }
+    methods:  [POST, PUT]
+
+disco_duro_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EquipoBundle:disco_duro:delete" }
+    methods:  [POST, DELETE]

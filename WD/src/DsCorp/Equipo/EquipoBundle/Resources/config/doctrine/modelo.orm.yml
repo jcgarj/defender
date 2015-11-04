@@ -1,0 +1,22 @@
+DsCorp\Equipo\EquipoBundle\Entity\modelo:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '10'
+    manyToOne:
+        caracteristicas_equipo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\caracteristicas_equipo
+            mappedBy: modelo
+    oneToMany: 
+        producto:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\producto
+            mappedBy: modelo
+    lifecycleCallbacks: {  }

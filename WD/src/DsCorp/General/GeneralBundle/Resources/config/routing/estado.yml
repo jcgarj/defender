@@ -1,0 +1,30 @@
+estado:
+    path:     /
+    defaults: { _controller: "GeneralBundle:estado:index" }
+
+estado_show:
+    path:     /{id}/show
+    defaults: { _controller: "GeneralBundle:estado:show" }
+
+estado_new:
+    path:     /new
+    defaults: { _controller: "GeneralBundle:estado:new" }
+
+estado_create:
+    path:     /create
+    defaults: { _controller: "GeneralBundle:estado:create" }
+    methods:  POST
+
+estado_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GeneralBundle:estado:edit" }
+
+estado_update:
+    path:     /{id}/update
+    defaults: { _controller: "GeneralBundle:estado:update" }
+    methods:  [POST, PUT]
+
+estado_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GeneralBundle:estado:delete" }
+    methods:  [POST, DELETE]

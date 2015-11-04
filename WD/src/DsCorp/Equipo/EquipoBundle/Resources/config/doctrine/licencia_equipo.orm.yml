@@ -1,0 +1,25 @@
+DsCorp\Equipo\EquipoBundle\Entity\licencia_equipo:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fechaInicio:
+            type: datetime
+            column: fecha_inicio
+        fechaFinal:
+            type: datetime
+            column: fecha_final
+    manyToOne:
+        tipo_licencia:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\tipo_licencia
+            mappedBy: licencia_equipo
+    oneToOne:
+        equipo:
+            targetEntity: DsCorp\Equipo\EquipoBundle\Entity\equipo
+            mappedBy: licencia_equipo
+    lifecycleCallbacks: {  }

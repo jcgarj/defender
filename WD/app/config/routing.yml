@@ -1,0 +1,15 @@
+general:
+    resource: "@GeneralBundle/Resources/config/routing.yml"
+    prefix:   /
+
+empresa:
+    resource: "@EmpresaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+equipo:
+    resource: "@EquipoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

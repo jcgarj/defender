@@ -1,0 +1,43 @@
+equipo_licencia_equipo:
+    resource: "@EquipoBundle/Resources/config/routing/licencia_equipo.yml"
+    prefix:   /licencia_equipo
+
+equipo_tipo_licencia:
+    resource: "@EquipoBundle/Resources/config/routing/tipo_licencia.yml"
+    prefix:   /tipo_licencia
+
+equipo_producto:
+    resource: "@EquipoBundle/Resources/config/routing/producto.yml"
+    prefix:   /producto
+
+equipo_modelo:
+    resource: "@EquipoBundle/Resources/config/routing/modelo.yml"
+    prefix:   /modelo
+
+equipo_capacidad:
+    resource: "@EquipoBundle/Resources/config/routing/capacidad.yml"
+    prefix:   /capacidad
+
+equipo_disco_duro:
+    resource: "@EquipoBundle/Resources/config/routing/disco_duro.yml"
+    prefix:   /disco_duro
+
+equipo_procesador:
+    resource: "@EquipoBundle/Resources/config/routing/procesador.yml"
+    prefix:   /procesador
+
+equipo_memoria_ram:
+    resource: "@EquipoBundle/Resources/config/routing/memoria_ram.yml"
+    prefix:   /memoria_ram
+
+equipo_caracteristicas_equipo:
+    resource: "@EquipoBundle/Resources/config/routing/caracteristicas_equipo.yml"
+    prefix:   /caracteristicas_equipo
+
+equipo_equipo:
+    resource: "@EquipoBundle/Resources/config/routing/equipo.yml"
+    prefix:   /equipo
+
+equipo_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: EquipoBundle:Default:index }

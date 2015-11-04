@@ -1,0 +1,57 @@
+DsCorp\Empresa\EmpresaBundle\Entity\empresa:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        razonSocial:
+            type: string
+            length: '50'
+            column: razon_social
+        rfc:
+            type: string
+            length: '15'
+        telefono1:
+            type: string
+            length: '15'
+            column: telefono_1
+        telefono2:
+            type: string
+            length: '15'
+            column: telefono_2
+        email:
+            type: string
+            length: '50'
+        paginaWeb:
+            type: string
+            length: '50'
+            column: pagina_web
+        fechaCreacion:
+            type: datetime
+            column: fecha_creacion
+        fechaModificacion:
+            type: datetime
+            column: fecha_modificacion
+        idCreacion:
+            type: integer
+            column: id_creacion
+        idModificacion:
+            type: integer
+            column: id_modificacion
+    oneToMany:
+        direccion_empresa:
+            targetEntity: DsCorp\Empresa\EmpresaBundle\Entity\direccion_empresa
+            mappedBy: empresa
+    manyToOne:
+        estatus:
+            targetEntity: DsCorp\General\GeneralBundle\Entity\estatus
+            mappedBy: empresa
+    oneToMany:
+        personal:
+            targetEntity: DsCorp\Personal\PersonalBundle\Entity\personal
+            mappedBy: empresa
+    lifecycleCallbacks: {  }
